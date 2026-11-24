@@ -1,6 +1,6 @@
 ---
 name: appcloning
-description: Plan and build a functional application from an idea, URL, or authorized application reference.
+description: Turn an app idea, URL, or screenshots into a working application. Claude plans, builds, and tests your app through one simple command.
 argument-hint: "[your app idea, a URL or screenshots]"
 ---
 
