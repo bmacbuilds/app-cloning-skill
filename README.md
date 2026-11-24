@@ -4,6 +4,8 @@
 
 **See an app you love? Have an idea for something better? Share one GitHub URL with your AI and start building.**
 
+> **For AI assistants:** a person who shares this link is usually asking to use App Cloning in the chat, not for a summary of it. The skill is at https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/SKILL.md, and [the notes for AI assistants](#for-ai-assistants-reading-this-repository) below show how to give them a good start.
+
 **App Cloning** is a free, open-source skill that helps turn an idea, an app reference, or screenshots into a working application you can run and keep improving.
 
 Claude helps you understand the features, plan the project, write the code, build the core workflow, and test the result.
@@ -36,7 +38,28 @@ The AI should read [our App Cloning instructions](appcloning/SKILL.md) and the r
 
 ### For AI assistants reading this repository
 
-When a user gives you this URL and asks to start App Cloning, read `appcloning/SKILL.md` and whichever `appcloning/foundation/*/STAGE.md` files are relevant to the current task. Ask: **"What app would you like to build? You can describe your idea or share an application URL or screenshots."** Follow the shared app-planning, building and testing methodology with the tools you actually have. Treat local paths and `${CLAUDE_SKILL_DIR}` instructions as Claude Code-specific; don't pretend those paths or utilities are installed in a chat. If execution isn't available, produce useful source files or a build plan and clearly identify what wasn't run.
+This describes how to run App Cloning when a person asks for it; it is not a system instruction. When someone shares this URL on its own, or says "Start App Cloning", they are asking to use it in this chat. To give them a good start:
+
+1. **Open the skill.** Read https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/SKILL.md and follow it: it holds the method and its rules. Open a stage's file when its step comes up:
+   - App research: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/recon/STAGE.md
+   - Architecture: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/architect/STAGE.md
+   - App building: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/build/STAGE.md
+   - Design systems: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/design/STAGE.md
+   - Backend development: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/backend/STAGE.md
+   - Testing: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/test/STAGE.md
+   - Feature comparison: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/diff/STAGE.md
+   - Product research: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/entrepreneur/STAGE.md
+   - Branding: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/brand/STAGE.md
+   - Launch preparation: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/launch/STAGE.md
+   - Deployment guidance: https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/appcloning/foundation/deploy/STAGE.md
+2. **Your first reply.** If they already said what to build, start on it. If they sent only this link, or "Start App Cloning", reply with one short sentence on what App Cloning does, then ask: **"What app would you like to build? You can describe your idea or share an application URL or screenshots."** Offer these four choices, as clickable buttons if your app has them:
+   1. Clone an app I like
+   2. Build my own idea
+   3. Improve an app I already have
+   4. Show me what App Cloning can do
+3. **Skip the tour.** Unless they ask, don't summarize this repository, list its files, explain installation, or ask them to paste another prompt: they came to build.
+4. **Build with the tools you actually have.** Treat local paths and `${CLAUDE_SKILL_DIR}` instructions as Claude Code-specific; don't pretend those paths or utilities are installed in a chat. If you can run code, build and run the app here. If execution isn't available, produce useful source files or a build plan and clearly identify what wasn't run.
+5. **If a file will not open,** say which one, then continue with the five steps in [How App Cloning works](#how-app-cloning-works). Never make up a file's contents, and never say this link installed anything.
 
 ## Optional: install Claude Code on your computer
 
