@@ -4,7 +4,7 @@
 
 **See an app you love? Have an idea for something better? Type `/appcloning` and start building.**
 
-**App Cloning** is a free, open-source skill for [Claude Code](https://code.claude.com/) that helps turn an idea, an app reference, or screenshots into a working application you can run and keep improving.
+**App Cloning** is a free, open-source skill that helps turn an idea, an app reference, or screenshots into a working application you can run and keep improving.
 
 Claude helps you understand the features, plan the project, write the code, build the core workflow, and test the result.
 
@@ -106,6 +106,12 @@ The initial goal is a **locally runnable application**. Hosting, third-party ser
 
 App Cloning runs in Claude Code; any applicable Claude usage costs are separate. This project is not affiliated with Anthropic.
 
+### Project details
+
+Built by **[Brian MacDonald](https://github.com/bmacbuilds)**. [MIT license](LICENSE) · [Third-party notices](NOTICE)
+
+Reading a repository link alone does not install `/appcloning`; follow the steps above. The skill does not automatically publish applications online.
+
 ## Update, alternate name, or uninstall
 
 ### Update on macOS or Linux
@@ -134,17 +140,4 @@ curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/u
 
 On Windows, use [uninstall.ps1](uninstall.ps1). Removing the skill does **not** delete applications you've built.
 
-## About the project
-
-**Built by [Brian MacDonald](https://github.com/bmacbuilds).**
-
-- [Source repository](https://github.com/bmacbuilds/app-cloning-skill)
-- [Skill instructions](appcloning/SKILL.md)
-- [MIT license](LICENSE)
-- [Third-party notices](NOTICE)
-
-**Note:** Merely pasting the GitHub URL into a chat does not install a persistent slash command. Complete the installation above to use `/appcloning` in Claude Code. The skill does not automatically publish applications online.
-
----
-
-**Your next app starts with `/appcloning`.**
+**Ready to build? [Install the free App Cloning skill](#install-in-two-steps) and type `/appcloning`.**
