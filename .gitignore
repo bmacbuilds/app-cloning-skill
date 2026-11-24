@@ -10,3 +10,6 @@ coverage/
 .turbo/
 .next/
 *.log
+
+# App Cloning ships its own build stage: never ignore it.
+!appcloning/foundation/build/
