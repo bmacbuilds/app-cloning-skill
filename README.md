@@ -1,85 +1,131 @@
-# App Cloning
+App Cloning
 
-Turn an idea, or an app you are allowed to study, into a working app of your own, with one command in Claude Code.
+Give Claude Code app-building superpowers.
 
-Built by [Brian MacDonald](https://github.com/bmacbuilds).
+See an app you love? Have an idea for something better? Just type /appcloning and start building.
 
-## Install
+App Cloning is a free Claude Code skill that turns your ideas, app references, and screenshots into working applications.
 
-You need [Claude Code](https://code.claude.com). Then install App Cloning once.
+Claude helps you figure out what to build, plans the features, writes the code, and tests a functional first version.
 
-**Mac or Linux:** paste this into Terminal and press Enter.
+Not just a mockup. Not just a plan. Real code. A working app. Yours to keep building.
 
-```
+Get Started
+
+Install once. Then build as many projects as you want.
+
+Step 1 — Install the free skill
+
+You’ll need Claude Code.
+
+Mac or Linux: Paste this into Terminal:
+
 curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash
-```
 
-**Windows:** paste this into PowerShell and press Enter.
+Windows: Paste this into PowerShell:
 
-```
 irm https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.ps1 -OutFile "$env:TEMP\appcloning-install.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\appcloning-install.ps1"
-```
 
-Then open Claude Code and type **`/appcloning`**.
+Step 2 — Open Claude Code
 
-The installer adds one folder to your Claude Code skills and changes nothing else. It never replaces a skill that is not
-App Cloning without asking you first. If you use a coding assistant, you can ask it to run the line for your computer;
-reading this page installs nothing.
+Type:
 
-## What it does
+/appcloning
 
-1. You type `/appcloning`, and Claude asks what you would like to build: an idea, a link or screenshots.
-2. Claude plans the smallest useful version.
-3. Claude builds it in a new folder on your computer, runs it, and checks every page in a browser.
-4. Claude tells you how to start it, what works, and what you can ask for next.
+Step 3 — Tell Claude what you want to build
 
-For example: `/appcloning Build me a simple appointment booking app where customers can choose available times.`
+Describe your idea, share an application URL, or provide screenshots.
 
-The first version runs on your own computer, with no accounts and no keys. When you want more, ask: research, a full
-design system, accounts and payments, how complete it is against the app you are rebuilding, your own name and brand,
-a landing page and store listings, or putting it live on your own domain.
+Claude takes it from there.
 
-**The rules it follows:**
-- It rebuilds what an app does, and never copies its code, images, design files or words.
-- It uses public sources and your own account only, and never scrapes or calls private APIs.
-- You create every account and key; it never types a password or a card.
-- It never uses the original app's name for yours.
+What Can You Build?
 
-**What it does not do:** it does not put anything online by itself, and it does not promise a finished product in one
-step. Some of its checks use Python 3; without it, App Cloning still works and skips them.
+Imagine being able to say:
 
-Not affiliated with Anthropic. Claude and Claude Code are trademarks of their owner.
+* “Build me an appointment booking app for my business.”
+* “Here’s a website I like. Help me build an app with similar functionality.”
+* “Create a CRM where I can manage leads and track deals.”
+* “I want a personal finance dashboard with income and expense tracking.”
+* “Build an app that lets customers book services and see their appointments.”
 
-## Update or remove it
+Start with something simple. Keep adding functionality as your idea grows.
 
-**Update** to the newest version:
+What Happens When You Type /appcloning?
 
-```
+1. Understand
+
+Claude asks what you want to build and identifies the essential features.
+
+2. Plan
+
+It creates an application plan, recommends a suitable technology stack, and identifies the smallest useful version.
+
+3. Build
+
+Claude creates your actual application files, including the interface and core functionality.
+
+4. Test
+
+It runs the application locally and checks that the primary workflow works.
+
+5. Keep Building
+
+You get a local project you can run, modify, extend, and continue improving with Claude.
+
+No need to memorize a collection of development commands. App Cloning guides the workflow from a single starting point.
+
+More Than Just a Prototype
+
+Once your first version works, you can ask Claude to keep going.
+
+Add a more complete design system, additional features, authentication, databases, integrations, testing, branding, or deployment planning.
+
+The first version is designed to work locally without requiring extra service accounts or API keys. Advanced functionality may have additional requirements.
+
+You decide how far to take it.
+
+Free. Open Source. Built to Grow.
+
+* Free to install — No App Cloning subscription.
+* One command — Start with /appcloning.
+* Your project files — Keep and extend what Claude builds.
+* Start small — Build a useful first version before adding complexity.
+* Continuously improving — New capabilities and refinements through future updates.
+
+Built by Brian MacDonald.
+
+Update or Uninstall
+
+Update on Mac or Linux:
+
 curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash -s -- --update
-```
 
-On Windows, add ` -Update` to the end of the Windows install line.
+On Windows, add -Update to the Windows installation command.
 
-**Another skill already uses `/appcloning`:** install App Cloning as `/bmac-appcloning` instead.
+Already have a skill using /appcloning?
 
-```
+Install ours under /bmac-appcloning instead:
+
 curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash -s -- --name bmac-appcloning
-```
 
-On Windows, add ` -Name bmac-appcloning` to the end of the Windows install line.
+On Windows, add -Name bmac-appcloning to the installation command.
 
-**Remove it.** The apps you built are never touched.
+Uninstall on Mac or Linux:
 
-```
 curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/uninstall.sh | bash
-```
 
-On Windows, run [uninstall.ps1](uninstall.ps1) the same way as the installer.
+On Windows, use the included uninstall.ps1.
 
-## Credits and licenses
+Uninstalling the skill does not delete the applications you created.
 
-MIT: [LICENSE](LICENSE). Third-party licenses: [NOTICE](NOTICE).
+Project Information
 
----
+Designed for Claude Code. The /appcloning command requires the skill to be installed; pasting the repository URL into an ordinary chat does not register the command.
 
-Ownbox Ready. Need a persistent database, dashboard, mobile app, or team collaboration? Take this skill further with Ownbox.
+App Cloning builds an initial local application and provides a workflow for extending it. It does not automatically publish applications online.
+
+License: MIT
+
+⸻
+
+Your next app starts with /appcloning.
