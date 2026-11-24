@@ -1,8 +1,8 @@
 # App Cloning
 
-### Give Claude Code app-building superpowers.
+### Give Claude and ChatGPT app-building superpowers.
 
-**See an app you love? Have an idea for something better? Type `/appcloning` and start building.**
+**See an app you love? Have an idea for something better? Share one GitHub URL with your AI and start building.**
 
 **App Cloning** is a free, open-source skill that helps turn an idea, an app reference, or screenshots into a working application you can run and keep improving.
 
@@ -10,13 +10,39 @@ Claude helps you understand the features, plan the project, write the code, buil
 
 **Not just a mockup. Not just a plan. Real code you can build on.**
 
-**[Install the free skill](#install-in-two-steps)** · **[See what it can do](#what-can-it-do)** · **[View the skill](appcloning/SKILL.md)**
+**[Start with the GitHub URL](#start-with-the-github-url)** · **[Explore the capabilities](#what-can-it-do)** · **[Optional Claude Code install](#optional-install-claude-code-on-your-computer)**
 
-## Install in two steps
+## Start with the GitHub URL
 
-You'll need [Claude Code](https://code.claude.com/). Install the skill once, then use `/appcloning` whenever you want to start a project.
+**No terminal needed to begin in a conversation.** Open Claude or ChatGPT on your computer or phone, then paste these two lines into a new chat:
 
-### 1. Install the skill
+```text
+https://github.com/bmacbuilds/app-cloning-skill
+Start App Cloning. Read the skill instructions in this repository and ask what app I want to build.
+```
+
+You can also try sending **just the GitHub URL**. If your AI asks what you'd like to do with it, reply: **Start App Cloning**.
+
+The AI should read [our App Cloning instructions](appcloning/SKILL.md) and the relevant [supporting workflows](appcloning/foundation/), then begin with your app idea, URL or screenshots.
+
+| Where you want to build | Easiest starting point |
+| --- | --- |
+| **Claude on your phone or computer** | Send the GitHub URL and say **Start App Cloning**. |
+| **ChatGPT on your phone or computer** | Send the same URL and instruction, if your ChatGPT session can access the public repository. |
+| **Claude Code on your computer** | Start conversationally or optionally install our persistent `/appcloning` command below. |
+| **Ownbox** | Planned integration; not yet available. |
+
+**What to expect:** This starts a *conversation-based* workflow, not an installed slash command. Access to GitHub content, creating project files, running code, and browser testing depend on the tools available in your Claude or ChatGPT session. If the AI cannot access a file, ask it to tell you which one is needed rather than making up its contents.
+
+### For AI assistants reading this repository
+
+When a user gives you this URL and asks to start App Cloning, read `appcloning/SKILL.md` and whichever `appcloning/foundation/*/STAGE.md` files are relevant to the current task. Ask: **"What app would you like to build? You can describe your idea or share an application URL or screenshots."** Follow the shared app-planning, building and testing methodology with the tools you actually have. Treat local paths and `${CLAUDE_SKILL_DIR}` instructions as Claude Code-specific; don't pretend those paths or utilities are installed in a chat. If execution isn't available, produce useful source files or a build plan and clearly identify what wasn't run.
+
+## Optional: install Claude Code on your computer
+
+If you want a persistent `/appcloning` slash command and local project execution, you can install the skill in [Claude Code](https://code.claude.com/). This is an **additional option**, not a prerequisite for trying App Cloning in a chat.
+
+### Install once
 
 **macOS or Linux** — paste into Terminal:
 
@@ -32,7 +58,7 @@ irm https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.
 
 You can review the [macOS/Linux installer](install.sh) or [Windows installer](install.ps1) before running it.
 
-### 2. Open Claude Code and type
+### Open Claude Code and type
 
 ```text
 /appcloning
@@ -84,7 +110,7 @@ One command starts the core workflow. The other capabilities are available when 
 
 These are **guided workflows**, not a guarantee that every requested application or integration will be completed automatically.
 
-## How `/appcloning` works
+## How App Cloning works
 
 1. **Understand** — Claude identifies what you want to build and the essential user flow.
 2. **Plan** — It maps the features and selects a practical starting architecture.
@@ -92,25 +118,25 @@ These are **guided workflows**, not a guarantee that every requested application
 4. **Test** — It attempts to run the app, check the core workflow, and fix issues using available tools.
 5. **Deliver** — It explains how to run the project, what works, and what to build next.
 
-You don't need to memorize eleven separate development commands. The skill organizes the workflow behind **`/appcloning`**.
+You don't need to memorize eleven separate development commands. The workflows are organized behind **`/appcloning`** when installed in Claude Code, or **Start App Cloning** when you share our GitHub URL in a supported chat.
 
 The initial goal is a **locally runnable application**. Hosting, third-party services, and production deployment are optional later steps that may require accounts, credentials, or additional setup.
 
 ## Free and open source
 
 - **Free skill:** No App Cloning subscription.
-- **One starting command:** `/appcloning`.
+- **One easy starting point:** Share our GitHub URL, or use `/appcloning` if installed in Claude Code.
 - **Your project:** Keep the files Claude creates and continue improving them.
 - **Start small:** Build the important functionality first.
 - **Extend it:** Add features, branding, integrations, and deployment when you're ready.
 
-App Cloning runs in Claude Code; any applicable Claude usage costs are separate. This project is not affiliated with Anthropic.
+App Cloning's installed command runs in Claude Code. Conversational use depends on the tools available in Claude or ChatGPT. Usage charges and plan requirements, if any, are determined by the AI platform you choose. This project is not affiliated with Anthropic or OpenAI.
 
 ### Project details
 
 Built by **[Brian MacDonald](https://github.com/bmacbuilds)**. [MIT license](LICENSE) · [Third-party notices](NOTICE)
 
-Reading a repository link alone does not install `/appcloning`; follow the steps above. The skill does not automatically publish applications online.
+Sharing a repository URL doesn't persistently install a slash command or automatically publish an application online.
 
 ## Update, alternate name, or uninstall
 
@@ -120,7 +146,7 @@ Reading a repository link alone does not install `/appcloning`; follow the steps
 curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash -s -- --update
 ```
 
-On Windows, add `-Update` to the [Windows install command](#1-install-the-skill).
+On Windows, add `-Update` to the [Windows install command](#install-once).
 
 ### Already have a skill called `/appcloning`?
 
@@ -130,7 +156,7 @@ Install under **`/bmac-appcloning`** instead:
 curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash -s -- --name bmac-appcloning
 ```
 
-On Windows, add `-Name bmac-appcloning` to the [Windows install command](#1-install-the-skill).
+On Windows, add `-Name bmac-appcloning` to the [Windows install command](#install-once).
 
 ### Uninstall on macOS or Linux
 
@@ -140,4 +166,4 @@ curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/u
 
 On Windows, use [uninstall.ps1](uninstall.ps1). Removing the skill does **not** delete applications you've built.
 
-**Ready to build? [Install the free App Cloning skill](#install-in-two-steps) and type `/appcloning`.**
+**Ready to build? [Start App Cloning with our GitHub URL](#start-with-the-github-url).**
