@@ -1,0 +1,14 @@
+{
+  "name": "appcloning",
+  "description": "Turn an app idea, URL, or screenshots into a working application. /appcloning plans, builds and tests it; each of its eleven stages is also its own command.",
+  "version": "1.1.0",
+  "author": {
+    "name": "Brian MacDonald",
+    "url": "https://github.com/bmacbuilds"
+  },
+  "homepage": "https://github.com/bmacbuilds/app-cloning-skill",
+  "repository": "https://github.com/bmacbuilds/app-cloning-skill",
+  "license": "MIT",
+  "keywords": ["claude-code", "claude-skills", "app-builder", "app-clone", "mvp"],
+  "skills": "./"
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "app-cloning-skill",
+  "description": "App Cloning by Brian MacDonald",
+  "owner": {
+    "name": "Brian MacDonald",
+    "url": "https://github.com/bmacbuilds"
+  },
+  "plugins": [
+    {
+      "name": "appcloning",
+      "description": "Turn an app idea, URL, or screenshots into a working application: /appcloning, and each of its eleven stages as its own command.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/bmacbuilds/app-cloning-skill"
+    }
+  ]
+}
