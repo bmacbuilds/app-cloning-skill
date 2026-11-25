@@ -211,6 +211,18 @@ this page. To remove it, delete it in Claude's skill settings.
 - You create every account and key. It never types a password or a card.
 - It never uses the original app's name for yours.
 
+## What it runs, sends and fetches
+
+- **Runs:** in Claude Code, your AI runs commands on the computer it works on. It creates your app's files, installs
+  your app's own dependencies with your OK, starts the app and tests it (in a browser with Playwright, installed only
+  with your OK), and uses the small Python 3 helpers that come with the skill. In a chat app it only writes code and
+  files.
+- **Sends:** nothing to us. App Cloning has no server, no account, no analytics and no tracking. What you type goes
+  only to the AI app you use, as it always does.
+- **Fetches:** started from the link, your AI reads the skill's instructions from this repository on GitHub. Asked to
+  study an app, it reads that app's public pages. The install script downloads the release from GitHub. The skill's
+  own helper scripts make no network requests.
+
 ## Free and open source
 
 Built by **[Brian MacDonald](https://github.com/bmacbuilds)**. [MIT license](LICENSE) · [Third-party notices](NOTICE)
