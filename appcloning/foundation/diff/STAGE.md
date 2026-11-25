@@ -8,6 +8,7 @@ description: >-
   user says "how close is my clone", "compare it to the original", "what's
   missing", "parity check", "diff the screens", "is it ready", or after
   the test stage.
+ask: What is done, missing or different from the app you studied
 ---
 
 # diff

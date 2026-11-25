@@ -14,7 +14,7 @@ set -euo pipefail
 
 NAME="appcloning"
 FALLBACK="bmac-appcloning"
-RELEASE_URL="${APPCLONING_RELEASE_URL:-https://github.com/bmacbuilds/app-cloning-skill/archive/refs/tags/v1.1.0.tar.gz}"
+RELEASE_URL="${APPCLONING_RELEASE_URL:-https://github.com/bmacbuilds/app-cloning-skill/archive/refs/tags/v1.2.0.tar.gz}"
 MARKER=".appcloning-install"
 STAGES="recon architect design build backend test diff entrepreneur brand launch deploy"
 FROM="" UPDATE=0 REPLACE=0 ASSUME_YES=0

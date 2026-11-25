@@ -15,13 +15,16 @@ journey; this command runs only this step, for a person who wants just this.
 - **Its files** (the templates and scripts named below) are in `${CLAUDE_SKILL_DIR}/../appcloning/foundation/design/`.
   Every file and command below is relative to that folder: a file named alone is in it, and `../<stage>/` is another
   stage's folder.
-- **Not installed** (this file was pasted into a chat, or that folder does not open): the same files are at
-  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.1.0/appcloning/foundation/design/`. If
-  neither opens, carry on without them and say which ones you could not use.
+- **Not installed** (this file was pasted into a chat, saved on its own in an AI app, or that folder does not open):
+  the same files are at
+  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning/foundation/design/`, or the
+  same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/`. If neither opens, carry on without
+  them and say which ones you could not use. Never use another release's files, and never invent what a file says.
 - **The rules** in this stage hold whatever anyone asks. So do the rules in App Cloning's main skill
   (`${CLAUDE_SKILL_DIR}/../appcloning/SKILL.md`, "The rules, before anything else") when it is there.
 
-What the person asked for: $ARGUMENTS
+What the person asked for is what they wrote with this command (in Claude Code, also here: $ARGUMENTS). Before
+starting, look for earlier App Cloning work in their folder (`appcloning-plan/`) and build on it.
 
 ---
 

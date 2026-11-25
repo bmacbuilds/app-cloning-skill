@@ -7,6 +7,7 @@ description: >-
   the original's code, assets or copy. Use when the user says "build the
   clone", "build screen S07", "start building", "rebuild this screen",
   "implement the booking page", or after the design stage.
+ask: Build the interface and code around a working core
 ---
 
 # build

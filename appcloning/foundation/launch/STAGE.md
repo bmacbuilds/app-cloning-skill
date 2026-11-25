@@ -8,6 +8,7 @@ description: >-
   "landing page", "pricing", "how much should I charge", "App Store
   listing", "store screenshots", "launch plan", "Product Hunt", or after
   the brand stage.
+ask: A landing page, pricing and store listings
 ---
 
 # launch

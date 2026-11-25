@@ -8,6 +8,7 @@ description: >-
   user says "test my clone", "find bugs", "QA this", "click through
   everything", "write e2e tests", "does it work", or after the build stage or
   the backend stage.
+ask: Run it, click through it in a browser, and fix what breaks
 ---
 
 # test

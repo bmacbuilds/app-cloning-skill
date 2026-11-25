@@ -8,6 +8,7 @@ description: >-
   mobile builds to TestFlight and Play. Use when the user says "deploy it",
   "ship it", "put it live", "connect my domain", "go to production",
   "publish the app", or after the launch stage.
+ask: Hosting, your domain and production services
 ---
 
 # deploy

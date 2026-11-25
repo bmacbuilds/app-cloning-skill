@@ -8,6 +8,7 @@ description: >-
   "name my app", "rebrand the clone", "make it mine", "pick a name and
   colours", "logo brief", "brand voice", "check for leftovers", or after
   the entrepreneur stage. Always runs before the launch stage.
+ask: Your own name, colours and voice
 ---
 
 # brand

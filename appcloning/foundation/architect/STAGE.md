@@ -8,6 +8,7 @@ description: >-
   says "plan the clone", "what stack should I use", "design the database",
   "write the schema", "plan the API", "architecture for my version of X", or
   after the recon stage finishes.
+ask: Plan the stack, database, routes and build order
 ---
 
 # architect

@@ -7,6 +7,7 @@ description: >-
   the user says "add login", "set up auth", "wire up the database", "add
   payments", "connect Stripe", "add Google Calendar", "send emails",
   "backend for my clone", or when the build stage is running on fake data.
+ask: Accounts, databases, payments, email and public APIs
 ---
 
 # backend

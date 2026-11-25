@@ -8,6 +8,7 @@ description: >-
   "reverse engineer X", "how does X work", "map out X", "what screens does X
   have", "I want to build my own version of X", "copy this app", or pastes an
   app's URL or App Store link and wants to rebuild it.
+ask: Map an app: its screens, user flows, features and data
 ---
 
 # recon

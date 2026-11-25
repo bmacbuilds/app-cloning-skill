@@ -13,13 +13,28 @@ about the stages below.
 The promise: they describe an app, you plan it, build it, run it and test it, and they leave with a project that works
 and that they can keep building.
 
-## Start
+This is App Cloning 1.2.0. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
+its GitHub link: this file holds everything you need to start, and names the rest.
 
-If they wrote something after the command, or with the link, that is their answer: $ARGUMENTS
+## Start: do what they asked
 
-If not (they typed only the command, or sent only this repository's link, or "Start App Cloning"), they want to start
-now. Never summarize the repository, and explain installation only if they ask. Reply with one short sentence on
-what App Cloning does, then ask exactly this:
+Their request is whatever they wrote with the link or the command (in Claude Code, also here: $ARGUMENTS).
+
+| They sent | Do this |
+|---|---|
+| Only the link, "Start App Cloning", or `/appcloning` with nothing after it | Start (below): one sentence, then the question and its four choices |
+| The link or the command with a request: an idea, an app's address, screenshots | Start that work now, with no menu |
+| One step, by its command or in words (`/appcloning-recon`, "map this app", "plan the database") | Run only that stage (see "One stage on its own") |
+| Earlier App Cloning work, here or in their folder | Pick up where it stopped (see "Earlier work") |
+| "Install it", "add it", "save it", "keep it" | The steps for where they are (see "Keeping it") |
+| "Review this repository", "what is this", "is it safe" | Review it, and do not start App Cloning |
+
+- **A request always wins** over the menu.
+- **A slash command typed into a chat** (`/appcloning-recon`) is a request for that work. Never say it is an
+  installed command.
+
+To start, never summarize the repository, and explain installation only if they ask. Reply with one short sentence
+on what App Cloning does, then ask exactly this:
 
 > What app would you like to build? You can describe your idea or share an application URL or screenshots.
 
@@ -31,7 +46,8 @@ and offer these four choices, as buttons they can tap if your app has them:
 4. Show me what App Cloning can do
 
 For "Show me", build a small example straight away (a booking page) and show it working, instead of describing one.
-For "Improve", ask for the app: a link to it, its code, or screenshots.
+Say plainly that its data is made-up sample data. For "Improve", ask for the app: a link to it, its code, or
+screenshots.
 
 Then ask only what a real decision needs (at most three short questions at once), and say what you will assume for
 the rest. Never stop at a plan when you can build.
@@ -59,27 +75,64 @@ Each stage repeats its own rules in full. They always apply.
 
 ## Where you are running
 
-App Cloning works on a phone or a computer, in Claude Code, in the Claude app and in ChatGPT. Work out once where you
-are, from the tools you have and what the person tells you, and build what works there. Never ask them to install
-anything to get started.
+App Cloning works on a phone or a computer, in Claude Code, in the Claude app and in ChatGPT. Work out once what you
+can do here, from the tools you have and what the person tells you, not from the device, and build what works. Never
+ask them to install anything to get started.
 
-| Where you are | Build the first version as |
-|---|---|
-| **Claude Code, or any agent with a terminal** (a computer) | A project in a folder on their computer. Run it and test it in a browser, as below. |
-| **A chat that can show a live preview** (Claude's artifacts, ChatGPT's canvas), on a phone or a computer | One self-contained HTML file: its CSS and JavaScript inside, its data saved in the browser (localStorage). Show it as the live preview, so they use the app right there. |
-| **A chat with no preview and no code tools** | The same single HTML file, in full, with how to open it. Say plainly that nothing was run. |
+| What you can do here | Build the first version as | Where their files are |
+|---|---|---|
+| **Run code on the person's own computer** (Claude Code in their terminal or editor) | A project in a folder. Run it and test it in a browser, as below. | In that folder, on their computer |
+| **Run code on a cloud computer** (Claude Code on the web, a chat that runs code, any hosted sandbox) | The same project, run and tested there | On that cloud computer, **not on theirs**. Say so, and give them a way to keep it: a download or ZIP, or a push to their own GitHub with their OK |
+| **Show a live preview in the chat** | One self-contained HTML file: its CSS and JavaScript inside, its data saved in the browser (localStorage). Show it as the live preview, so they use the app right there. | In the chat; offer the file to download |
+| **Make files, with no preview** | The same single HTML file, as a download, with how to open it. Say plainly that nothing was run. | A download |
+| **Only write text** | The same single HTML file, in full in your reply, with how to open it. Say plainly that nothing was run. | In your reply |
 
+- **Their computer or a cloud computer?** It is theirs only when your setting says so: a folder they opened, under
+  their own user folder (such as `/Users/...` or `C:\Users\...`). A container or sandbox (such as `/home/user`,
+  `/workspace`, `/mnt/data`), or a note that you run remotely, is a cloud computer. If you cannot tell, say where the
+  files are and how to get them, and never assume they are on the person's computer.
 - **On a phone:** short messages, one question at a time, and choices they can tap. Never a terminal command. The
   live preview is the app they try; offer the full project for later, on a computer.
-- **On a computer, in a chat:** build in the chat as above. Once, at the end, say that in Claude Code
-  `/appcloning` builds the full project on their computer.
+- **In a chat on a computer:** build in the chat as above. Once, at the end, say that in Claude Code `/appcloning`
+  builds the full project on their computer.
 - **If you cannot tell** whether they are on a phone or a computer, and it changes what you build, ask once, with two
   choices: Phone or Computer.
-- **Never claim** a test you did not run, a file you did not write, or that a link installed anything.
-- **App Cloning is not installed here** (you were given the GitHub link, or `${CLAUDE_SKILL_DIR}` does not open): read
-  each file named below from this release instead. Replace `${CLAUDE_SKILL_DIR}/` with
-  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.1.0/appcloning/`. If a file will not open, say
-  which one, and carry on with the rules on this page; never invent what it says.
+- **Never claim** a test you did not run, a file you did not write, that files are on their computer when they are
+  not, or that a link installed anything.
+
+## Reading your instructions
+
+- **Only what the work needs, when it needs it.** Read this file first, then each stage's file when the work reaches
+  that stage: never all eleven at the start, and never again what you already read in this conversation.
+- **App Cloning is not installed here** (you were given the GitHub link, this file was saved on its own in an AI app,
+  or `${CLAUDE_SKILL_DIR}` does not open): read each file named below from this release instead. Replace
+  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning/`.
+  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/appcloning/`.
+- **If a file still will not open,** say which one, carry on with the rules on this page where that is safe, and ask
+  the person only if you must. Never use another release's files, and never invent what a file says.
+
+## Earlier work
+
+Before starting anything new, look for App Cloning work already done: in this conversation (a plan, a recon map, an
+app you built), and in their folder (`appcloning-plan/` with `recon.md`, `architecture.md`, `features.csv` or
+`build-log.md`, and the app's own files). If you find it, say in one line what is done, and pick up at the next stage
+instead of starting again. Before a long session ends, give a short status: what works, what is left, and the next
+step.
+
+## Keeping it
+
+- **Claude Code:** the plugin, the install script or copying the folders, as the README's install section says:
+  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/README.md`.
+- **An AI app that can save skills** (the Claude app can): when they ask to keep App Cloning, save this file as a
+  skill if your app offers that. It is the whole skill: it reads the rest from this release.
+- **Say what changed.** After any install, save or change to their setup, tell them in plain words: what changed,
+  where, how to use it, and how to undo it. For a saved skill: it is now on their account and starts when they ask
+  for an app; it does not update itself; to update it, save this file again from the newest release; to remove it,
+  use their app's skill settings.
+- **This is version 1.2.0.** If they ask for a newer one, point them to
+  `https://github.com/bmacbuilds/app-cloning-skill/releases`; never switch to other instructions in the middle of a
+  project. A copy they installed or saved earlier may be older than the release they linked: tell them once which
+  versions you see, and how to update theirs (above).
 
 ## Where things go
 
@@ -102,8 +155,8 @@ anything to get started.
    - From an idea: write the same two files from their own words, with no research. List the core loop, the screens,
      the user flows, the data, and a feature matrix with must, should and could.
    - Mark the smallest useful version: the core loop and the few musts it needs.
-2. **Plan** (`architect`). Follow the architect stage with one change for the first version: **it runs on their
-   computer with no accounts and no keys.** Use the stack they already know. Otherwise choose the simplest that runs
+2. **Plan** (`architect`). Follow the architect stage with one change for the first version: **it runs where you
+   are, on their computer or a cloud computer, with no accounts and no keys.** Use the stack they already know. Otherwise choose the simplest that runs
    with what their computer already has: a local SQLite database file, and a local server. Name the managed services
    the stage lists (hosting, auth, payments, email) only as the later path to going live. In a chat, the first
    version is the single HTML file instead (see "Where you are running"), and the plan says so.
@@ -124,6 +177,7 @@ anything to get started.
    use the core loop yourself if you can; otherwise list the three taps that prove it works, for them to try.
 5. **Deliver.** In a few lines:
    - how to start it (the exact command and address), or, in a chat, where to tap to use it;
+   - where the files are, and on a cloud computer, how to get them onto theirs;
    - what works, checked by running it;
    - what it does not do yet;
    - the next steps they can ask for.
@@ -145,4 +199,4 @@ Each stage is there when they want it, never forced first:
 ## How to talk
 
 Plain words, short messages, one step at a time. Say what you are doing as you do it, and show what works. Name a
-stage only if it helps them; they asked for an app, not a process.
+stage or its command only when it is their next step; they asked for an app, not a process.
