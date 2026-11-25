@@ -24,6 +24,15 @@ Reads everything in `appcloning-plan/`. Writes `appcloning-plan/deploy.md` (the 
   types a password or pastes a live key. Claude writes the exact DNS records,
   env var names and commands; the user does the account steps.
 - **Not until it is rebranded.** The sweep must be clean. No exceptions.
+- **Their host, never ours.** App Cloning hosts nothing. The app goes on an
+  account the user owns and chose.
+- **Say where the data lives** before it goes live: personal (each person sees
+  only their own) or shared, and who can see and change what. Nothing private
+  (keys, passwords, personal data) ships in the app.
+- **A preview is not live.** Never call a preview, a chat's share link or a
+  localhost address the live app. It is live once its real address has been
+  opened and the core flow run through it, from a browser that is not signed
+  in where that matters.
 
 ## Step 1: preflight
 

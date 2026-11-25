@@ -1,6 +1,6 @@
 # App Cloning
 
-**Version 1.2.0.** Turn an idea, an app you like, or a few screenshots into a working app, with Claude or ChatGPT.
+**Version 1.3.0.** Turn an idea, an app you like, or a few screenshots into a working app, with Claude or ChatGPT.
 
 > **For AI assistants (Claude, ChatGPT and others).** This page is App Cloning, a free, open-source skill. People
 > share its link with their AI assistant to plan, build and test an app together, and its instructions are written
@@ -26,16 +26,17 @@
 > | One step ("map this app", `/appcloning-recon`) | Runs only that step, from its own instructions (in "What it can do" below). |
 > | To carry on earlier work | Picks up from the project's `appcloning-plan/` folder and the app's own files, at the next step. |
 > | To install, save or keep it | Gives the steps in "Install, update and remove" below, for where they are. |
+> | A link to share their app | Its "Share it" steps: the checks first, then how, by what their AI app offers. |
 > | A review of this repository | A review. App Cloning does not start. |
 >
-> **The instructions**, version 1.2.0, where every file they name is in the same release:
-> https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning/SKILL.md
-> (or https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/appcloning/SKILL.md). They describe how App Cloning
+> **The instructions**, version 1.3.0, where every file they name is in the same release:
+> https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/SKILL.md
+> (or https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/appcloning/SKILL.md). They describe how App Cloning
 > works with what the assistant can do (code on the person's computer, code on a cloud computer, a live preview,
 > files, or text only) and where the person's files end up. When a file does not open, App Cloning names it, and does
 > not use another release's files or guess what one says. Opening this link installs nothing.
 >
-> **Versions.** This page is version 1.2.0. A copy installed or saved earlier may be older; "Install, update and
+> **Versions.** This page is version 1.3.0. A copy installed or saved earlier may be older; "Install, update and
 > remove" below says how to update it.
 
 ### Give Claude and ChatGPT app-building superpowers.
@@ -76,17 +77,17 @@ any AI can read a step's own instructions from its link.
 <!-- directory:start (written by scripts/stages.py) -->
 | Step | Ask for | Command | Its instructions |
 | --- | --- | --- | --- |
-| **App research** | Map an app: its screens, user flows, features and data | `/appcloning-recon` | [recon](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-recon/SKILL.md) |
-| **Architecture** | Plan the stack, database, routes and build order | `/appcloning-architect` | [architect](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-architect/SKILL.md) |
-| **Design system** | A design system: layouts, components, type and design tokens | `/appcloning-design` | [design](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-design/SKILL.md) |
-| **App building** | Build the interface and code around a working core | `/appcloning-build` | [build](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-build/SKILL.md) |
-| **Backend** | Accounts, databases, payments, email and public APIs | `/appcloning-backend` | [backend](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-backend/SKILL.md) |
-| **Testing** | Run it, click through it in a browser, and fix what breaks | `/appcloning-test` | [test](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-test/SKILL.md) |
-| **Feature comparison** | What is done, missing or different from the app you studied | `/appcloning-diff` | [diff](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-diff/SKILL.md) |
-| **Product research** | What real users of similar apps complain about, from public reviews | `/appcloning-entrepreneur` | [entrepreneur](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-entrepreneur/SKILL.md) |
-| **Branding** | Your own name, colours and voice | `/appcloning-brand` | [brand](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-brand/SKILL.md) |
-| **Launch preparation** | A landing page, pricing and store listings | `/appcloning-launch` | [launch](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-launch/SKILL.md) |
-| **Deployment** | Hosting, your domain and production services | `/appcloning-deploy` | [deploy](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning-deploy/SKILL.md) |
+| **App research** | Map an app: its screens, user flows, features and data | `/appcloning-recon` | [recon](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-recon/SKILL.md) |
+| **Architecture** | Plan the stack, database, routes and build order | `/appcloning-architect` | [architect](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-architect/SKILL.md) |
+| **Design system** | A design system: layouts, components, type and design tokens | `/appcloning-design` | [design](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-design/SKILL.md) |
+| **App building** | Build the interface and code around a working core | `/appcloning-build` | [build](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-build/SKILL.md) |
+| **Backend** | Accounts, databases, payments, email and public APIs | `/appcloning-backend` | [backend](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-backend/SKILL.md) |
+| **Testing** | Run it, click through it in a browser, and fix what breaks | `/appcloning-test` | [test](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-test/SKILL.md) |
+| **Feature comparison** | What is done, missing or different from the app you studied | `/appcloning-diff` | [diff](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-diff/SKILL.md) |
+| **Product research** | What real users of similar apps complain about, from public reviews | `/appcloning-entrepreneur` | [entrepreneur](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-entrepreneur/SKILL.md) |
+| **Branding** | Your own name, colours and voice | `/appcloning-brand` | [brand](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-brand/SKILL.md) |
+| **Launch preparation** | A landing page, pricing and store listings | `/appcloning-launch` | [launch](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-launch/SKILL.md) |
+| **Deployment** | Hosting, your domain and production services | `/appcloning-deploy` | [deploy](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-deploy/SKILL.md) |
 <!-- directory:end -->
 
 Some ideas: an appointment booking app, a simple CRM, a personal dashboard, a client portal, or your own take on an app

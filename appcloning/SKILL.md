@@ -13,7 +13,7 @@ about the stages below.
 The promise: they describe an app, you plan it, build it, run it and test it, and they leave with a project that works
 and that they can keep building.
 
-This is App Cloning 1.2.0. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
+This is App Cloning 1.3.0. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
 its GitHub link: this file holds everything you need to start, and names the rest.
 
 ## Start: do what they asked
@@ -27,6 +27,7 @@ Their request is whatever they wrote with the link or the command (in Claude Cod
 | One step, by its command or in words (`/appcloning-recon`, "map this app", "plan the database") | Run only that stage (see "One stage on its own") |
 | Earlier App Cloning work, here or in their folder | Pick up where it stopped (see "Earlier work") |
 | "Install it", "add it", "save it", "keep it" | The steps for where they are (see "Keeping it") |
+| "Publish it", "share it", "give me a link to it" | The steps for where they are, with the checks first (see "Share it") |
 | "Review this repository", "what is this", "is it safe" | Review it, and do not start App Cloning |
 
 - **A request always wins** over the menu.
@@ -87,6 +88,10 @@ ask them to install anything to get started.
 | **Make files, with no preview** | The same single HTML file, as a download, with how to open it. Say plainly that nothing was run. | A download |
 | **Only write text** | The same single HTML file, in full in your reply, with how to open it. Say plainly that nothing was run. | In your reply |
 
+Where more than one row fits, use the first: code that runs comes before a preview. Then the app is run and tested
+there (step 4 below); a live preview can come after, as an extra. How they get a link to share it comes later, once
+the app works (see "Share it").
+
 - **Their computer or a cloud computer?** It is theirs only when your setting says so: a folder they opened, under
   their own user folder (such as `/Users/...` or `C:\Users\...`). A container or sandbox (such as `/home/user`,
   `/workspace`, `/mnt/data`), or a note that you run remotely, is a cloud computer. If you cannot tell, say where the
@@ -106,8 +111,8 @@ ask them to install anything to get started.
   that stage: never all eleven at the start, and never again what you already read in this conversation.
 - **App Cloning is not installed here** (you were given the GitHub link, this file was saved on its own in an AI app,
   or `${CLAUDE_SKILL_DIR}` does not open): read each file named below from this release instead. Replace
-  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning/`.
-  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/appcloning/`.
+  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/`.
+  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/appcloning/`.
 - **If a file still will not open,** say which one, carry on with the rules on this page where that is safe, and ask
   the person only if you must. Never use another release's files, and never invent what a file says.
 
@@ -122,14 +127,14 @@ step.
 ## Keeping it
 
 - **Claude Code:** the plugin, the install script or copying the folders, as the README's install section says:
-  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/README.md`.
+  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/README.md`.
 - **An AI app that can save skills** (the Claude app can): when they ask to keep App Cloning, save this file as a
   skill if your app offers that. It is the whole skill: it reads the rest from this release.
 - **Say what changed.** After any install, save or change to their setup, tell them in plain words: what changed,
   where, how to use it, and how to undo it. For a saved skill: it is now on their account and starts when they ask
   for an app; it does not update itself; to update it, save this file again from the newest release; to remove it,
   use their app's skill settings.
-- **This is version 1.2.0.** If they ask for a newer one, point them to
+- **This is version 1.3.0.** If they ask for a newer one, point them to
   `https://github.com/bmacbuilds/app-cloning-skill/releases`; never switch to other instructions in the middle of a
   project. A copy they installed or saved earlier may be older than the release they linked: tell them once which
   versions you see, and how to update theirs (above).
@@ -164,6 +169,11 @@ step.
    - Design: a small token file (colours, type, spacing), enough for the build stage's "tokens only" rule.
    - Build: the shell, then the vertical slice. The core loop works end to end and saves to the local database, so
      what the person does is still there after a reload. Seed it with realistic sample data.
+   - Keep four parts apart, even in one file: the screens, the rules (such as which times are free), the storage, and
+     outside services. All saving and loading goes through one small piece (in one file: one object with its load
+     and save), so moving the app to shared storage, a site's database or a server changes only that piece.
+   - The first version saves where it runs: the local database, or browser storage in one file. Shared data,
+     sign-ins and who can see what come with publishing (see "Share it"), never before the first version works.
    - Install the app's dependencies with their OK, and keep `appcloning-plan/build-log.md`.
 4. **Test** (`test`). Start the app and use its core loop for real, twice over:
    - **The server:** requests to the running app, for every step of the core loop.
@@ -178,9 +188,62 @@ step.
 5. **Deliver.** In a few lines:
    - how to start it (the exact command and address), or, in a chat, where to tap to use it;
    - where the files are, and on a cloud computer, how to get them onto theirs;
+   - where its data lives: only for now, on this device for this person (personal), or shared by everyone who opens
+     it;
    - what works, checked by running it;
    - what it does not do yet;
    - the next steps they can ask for.
+
+   Write the same in `appcloning-plan/delivery.md`, with what the app needs to run and where it can run (in a chat,
+   these lines in your reply are the note). Plain notes, not a project file format. Then offer the three choices.
+
+## Once it works: three choices
+
+Offer these, as buttons they can tap if your app has them, and only the ones that work where you are:
+
+1. **Keep improving my app**
+2. **Publish and get a shareable URL**, only if "Share it" has a way for where you are. If it has none, leave it out
+   and say in one line why.
+3. **Download my application source code**: the folder or a ZIP, or the single file.
+
+Publishing never comes before the first working version: never ask about hosting, accounts or sharing until they
+have used the app.
+
+## Share it
+
+**Before anything is published,** every time:
+
+- their yes, and who should be able to open it: only them, people they invite, or anyone with the link;
+- nothing private in it: no keys, no passwords, no personal data, nothing from their own records they did not mean to
+  show;
+- sign-in and data access as they intend: who can see what, and who can change it;
+- the core flow tested on exactly the version being published;
+- where its data lives, said plainly: only for now, personal (each person sees only their own), or shared (everyone
+  who opens it works with the same data). A booking app needs shared data, or nobody sees anyone else's bookings.
+  Moving to shared data is part of publishing: change only the storage piece, and test the core flow again.
+
+**Never call** a preview, a chat's share link or a `localhost` address a public app. A link works only once someone
+has opened it and run the core flow through it, best from a second browser that is not signed in. Say who did that
+and what happened, or say it is not checked yet.
+
+**How, by what you can do here.** Work out what your app offers; never assume it from the app's name.
+
+| Where you are | How they get a link |
+|---|---|
+| **A chat whose interactive results have a Share control** (such as artifacts in the Claude app) | The app is the artifact. Where your app offers sharing, tell them how: open it, press Share, choose who can open it, then copy the link (an older artifact may say Publish). If the device they are on does not offer it, say where it is offered. Shared data, such as bookings, goes in the artifact's shared storage where their plan offers storage. Tell them a visitor without an account may not be able to use what relies on the AI or a connected app, and check before calling the link working. |
+| **A chat that can publish a site** (such as ChatGPT Sites, where their plan offers it) | Publish it as a site, with their yes. Keep it private until they choose who can open it, and tell them whether visitors must sign in. Never put health or card data in it. |
+| **A chat that cannot publish, when their app has a mode that can** (such as a ChatGPT mode that offers Sites, where their plan has it) | Give them the handoff prompt below to paste there, so they never start over. |
+| **No way to publish from here** (a plan without publishing, text only, no share control) | Say plainly that there is no link from here, give the download, and say it can go on a host they own later. |
+| **Code on their computer or a cloud computer** (Claude Code) | Only from an account they own, with their yes. A single-file or static app: their own GitHub Pages, from a repository they choose, only when they chose anyone with the link: a Pages site is public, and on a free GitHub plan its repository (code and history) is public too. If they chose only them or people they invite, use a host that can limit who opens it, never Pages. An app with a server or a database: the `deploy` stage, on a host they choose. A cloud computer's preview address is temporary and is not public. |
+
+App Cloning never hosts anything, and never uses an account that is not theirs.
+
+**The handoff prompt.** Fill it in and give it as one block they can copy, with the app's file attached or pasted
+under it:
+
+> Publish this app as a site. It is [name]: [what it does, in one line]. Screens: [list]. Its data: [what it saves],
+> [shared or personal]. Keep how it works exactly, and change only what publishing needs, such as moving its storage
+> to the site's own database. Publish it privately first, then tell me how to share it. The working app is below.
 
 ## When they ask for more
 

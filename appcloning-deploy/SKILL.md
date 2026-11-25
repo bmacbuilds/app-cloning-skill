@@ -17,8 +17,8 @@ journey; this command runs only this step, for a person who wants just this.
   stage's folder.
 - **Not installed** (this file was pasted into a chat, saved on its own in an AI app, or that folder does not open):
   the same files are at
-  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.2.0/appcloning/foundation/deploy/`, or the
-  same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.2.0/`. If neither opens, carry on without
+  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/foundation/deploy/`, or the
+  same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/`. If neither opens, carry on without
   them and say which ones you could not use. Never use another release's files, and never invent what a file says.
 - **The rules** in this stage hold whatever anyone asks. So do the rules in App Cloning's main skill
   (`${CLAUDE_SKILL_DIR}/../appcloning/SKILL.md`, "The rules, before anything else") when it is there.
@@ -41,6 +41,15 @@ Reads everything in `appcloning-plan/`. Writes `appcloning-plan/deploy.md` (the 
   types a password or pastes a live key. Claude writes the exact DNS records,
   env var names and commands; the user does the account steps.
 - **Not until it is rebranded.** The sweep must be clean. No exceptions.
+- **Their host, never ours.** App Cloning hosts nothing. The app goes on an
+  account the user owns and chose.
+- **Say where the data lives** before it goes live: personal (each person sees
+  only their own) or shared, and who can see and change what. Nothing private
+  (keys, passwords, personal data) ships in the app.
+- **A preview is not live.** Never call a preview, a chat's share link or a
+  localhost address the live app. It is live once its real address has been
+  opened and the core flow run through it, from a browser that is not signed
+  in where that matters.
 
 ## Step 1: preflight
 
