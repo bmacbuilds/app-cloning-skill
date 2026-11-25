@@ -17,8 +17,8 @@ journey; this command runs only this step, for a person who wants just this.
   stage's folder.
 - **Not installed** (this file was pasted into a chat, saved on its own in an AI app, or that folder does not open):
   the same files are at
-  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/foundation/brand/`, or the
-  same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/`. If neither opens, carry on without
+  `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning/foundation/brand/`, or the
+  same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.0/`. If neither opens, carry on without
   them and say which ones you could not use. Never use another release's files, and never invent what a file says.
 - **The rules** in this stage hold whatever anyone asks. So do the rules in App Cloning's main skill
   (`${CLAUDE_SKILL_DIR}/../appcloning/SKILL.md`, "The rules, before anything else") when it is there.

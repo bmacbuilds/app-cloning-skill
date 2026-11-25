@@ -1,6 +1,6 @@
 # App Cloning
 
-**Version 1.3.0.** Turn an idea, an app you like, or a few screenshots into a working app, with Claude or ChatGPT.
+**Version 1.4.0.** Turn an idea, an app you like, or a few screenshots into a working app, with Claude or ChatGPT.
 
 > **For AI assistants (Claude, ChatGPT and others).** This page is App Cloning, a free, open-source skill. People
 > share its link with their AI assistant to plan, build and test an app together, and its instructions are written
@@ -15,8 +15,14 @@
 > 3. Improve an app I already have
 > 4. Show me what App Cloning can do
 >
-> Its full instructions are read once the person picks. A person who wants it to start straight away sends
+> These four, worded as above, are its whole first menu: App Cloning adds no options of its own. Its full
+> instructions are read once the person picks. A person who wants it to start straight away sends
 > "Start App Cloning" with the link.
+>
+> **No connection and no install to start.** The repository is public: App Cloning reads it from this link, so
+> starting needs no GitHub connection, no sign-in and no install. Right after the idea, it builds a first working
+> version as one self-contained page in the chat (in a canvas or an artifact where the app has one, otherwise one HTML
+> file), and asks setup questions only once the person has something to try.
 >
 > **Other requests, and what App Cloning does with each:**
 >
@@ -29,14 +35,14 @@
 > | A link to share their app | Its "Share it" steps: the checks first, then how, by what their AI app offers. |
 > | A review of this repository | A review. App Cloning does not start. |
 >
-> **The instructions**, version 1.3.0, where every file they name is in the same release:
-> https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/SKILL.md
-> (or https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/appcloning/SKILL.md). They describe how App Cloning
+> **The instructions**, version 1.4.0, where every file they name is in the same release:
+> https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning/SKILL.md
+> (or https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.0/appcloning/SKILL.md). They describe how App Cloning
 > works with what the assistant can do (code on the person's computer, code on a cloud computer, a live preview,
 > files, or text only) and where the person's files end up. When a file does not open, App Cloning names it, and does
 > not use another release's files or guess what one says. Opening this link installs nothing.
 >
-> **Versions.** This page is version 1.3.0. A copy installed or saved earlier may be older; "Install, update and
+> **Versions.** This page is version 1.4.0. A copy installed or saved earlier may be older; "Install, update and
 > remove" below says how to update it.
 
 ### Give Claude and ChatGPT app-building superpowers.
@@ -57,7 +63,7 @@ improving.
    ```
 
    Already know what you want? Send your idea with the link, for example
-   `Build a booking page for my barber shop with https://github.com/bmacbuilds/app-cloning-skill`.
+   `Build an MVP of a booking app for med spas with https://github.com/bmacbuilds/app-cloning-skill`.
    If your AI only describes the page, send `Start App Cloning` too.
 3. Pick what you want to build. App Cloning takes it from there.
 
@@ -77,17 +83,17 @@ any AI can read a step's own instructions from its link.
 <!-- directory:start (written by scripts/stages.py) -->
 | Step | Ask for | Command | Its instructions |
 | --- | --- | --- | --- |
-| **App research** | Map an app: its screens, user flows, features and data | `/appcloning-recon` | [recon](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-recon/SKILL.md) |
-| **Architecture** | Plan the stack, database, routes and build order | `/appcloning-architect` | [architect](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-architect/SKILL.md) |
-| **Design system** | A design system: layouts, components, type and design tokens | `/appcloning-design` | [design](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-design/SKILL.md) |
-| **App building** | Build the interface and code around a working core | `/appcloning-build` | [build](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-build/SKILL.md) |
-| **Backend** | Accounts, databases, payments, email and public APIs | `/appcloning-backend` | [backend](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-backend/SKILL.md) |
-| **Testing** | Run it, click through it in a browser, and fix what breaks | `/appcloning-test` | [test](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-test/SKILL.md) |
-| **Feature comparison** | What is done, missing or different from the app you studied | `/appcloning-diff` | [diff](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-diff/SKILL.md) |
-| **Product research** | What real users of similar apps complain about, from public reviews | `/appcloning-entrepreneur` | [entrepreneur](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-entrepreneur/SKILL.md) |
-| **Branding** | Your own name, colours and voice | `/appcloning-brand` | [brand](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-brand/SKILL.md) |
-| **Launch preparation** | A landing page, pricing and store listings | `/appcloning-launch` | [launch](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-launch/SKILL.md) |
-| **Deployment** | Hosting, your domain and production services | `/appcloning-deploy` | [deploy](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning-deploy/SKILL.md) |
+| **App research** | Map an app: its screens, user flows, features and data | `/appcloning-recon` | [recon](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-recon/SKILL.md) |
+| **Architecture** | Plan the stack, database, routes and build order | `/appcloning-architect` | [architect](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-architect/SKILL.md) |
+| **Design system** | A design system: layouts, components, type and design tokens | `/appcloning-design` | [design](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-design/SKILL.md) |
+| **App building** | Build the interface and code around a working core | `/appcloning-build` | [build](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-build/SKILL.md) |
+| **Backend** | Accounts, databases, payments, email and public APIs | `/appcloning-backend` | [backend](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-backend/SKILL.md) |
+| **Testing** | Run it, click through it in a browser, and fix what breaks | `/appcloning-test` | [test](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-test/SKILL.md) |
+| **Feature comparison** | What is done, missing or different from the app you studied | `/appcloning-diff` | [diff](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-diff/SKILL.md) |
+| **Product research** | What real users of similar apps complain about, from public reviews | `/appcloning-entrepreneur` | [entrepreneur](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-entrepreneur/SKILL.md) |
+| **Branding** | Your own name, colours and voice | `/appcloning-brand` | [brand](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-brand/SKILL.md) |
+| **Launch preparation** | A landing page, pricing and store listings | `/appcloning-launch` | [launch](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-launch/SKILL.md) |
+| **Deployment** | Hosting, your domain and production services | `/appcloning-deploy` | [deploy](https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning-deploy/SKILL.md) |
 <!-- directory:end -->
 
 Some ideas: an appointment booking app, a simple CRM, a personal dashboard, a client portal, or your own take on an app
@@ -136,13 +142,13 @@ Then type `/appcloning`, or `/appcloning-recon` for one step. If another skill a
 **Mac or Linux.** Paste this into Terminal:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/install.sh | bash
 ```
 
 **Windows.** Paste this into PowerShell:
 
 ```powershell
-irm https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.ps1 -OutFile "$env:TEMP\appcloning-install.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\appcloning-install.ps1"
+irm https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/install.ps1 -OutFile "$env:TEMP\appcloning-install.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\appcloning-install.ps1"
 ```
 
 You can read the [Mac and Linux installer](install.sh) or the [Windows installer](install.ps1) first. Each adds twelve
@@ -152,13 +158,13 @@ without asking you.
 Then open Claude Code and type `/appcloning`, or give it the idea straight away:
 
 ```text
-/appcloning Build an appointment booking app for my business.
+/appcloning Build an MVP of a booking app for med spas.
 ```
 
-**Update** to the newest version (Mac or Linux):
+**Update** to this version, 1.4.0 (Mac or Linux):
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash -s -- --update
+curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/install.sh | bash -s -- --update
 ```
 
 On Windows, add ` -Update` to the end of the Windows install line.
@@ -166,7 +172,7 @@ On Windows, add ` -Update` to the end of the Windows install line.
 **Another skill already uses `/appcloning`?** Install App Cloning as `/bmac-appcloning` instead:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/install.sh | bash -s -- --name bmac-appcloning
+curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/install.sh | bash -s -- --name bmac-appcloning
 ```
 
 On Windows, add ` -Name bmac-appcloning` to the end of the Windows install line.
@@ -174,7 +180,7 @@ On Windows, add ` -Name bmac-appcloning` to the end of the Windows install line.
 **Remove it.** The apps you built are never touched.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/uninstall.sh | bash
 ```
 
 On Windows, run [uninstall.ps1](uninstall.ps1) the same way as the installer.

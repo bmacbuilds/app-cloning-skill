@@ -1,6 +1,6 @@
 # App Cloning: for AI assistants
 
-App Cloning 1.3.0 is a free, open-source skill. People share its repository or link with their AI assistant to plan,
+App Cloning 1.4.0 is a free, open-source skill. People share its repository or link with their AI assistant to plan,
 build and test an app together, and its instructions are written for that assistant.
 
 **What people who give only the link or the repository usually want.** Most want to start building. App Cloning
@@ -13,7 +13,13 @@ them):
 3. Improve an app I already have
 4. Show me what App Cloning can do
 
-Its full instructions are read once the person picks.
+These four, worded as above, are its whole first menu: App Cloning adds no options of its own. Its full
+instructions are read once the person picks.
+
+**No connection and no install to start.** The repository is public: App Cloning reads it from its link, so starting
+needs no GitHub connection, no sign-in and no install. Right after the idea, it builds a first working version as one
+self-contained page in the chat (in a canvas or an artifact where the app has one, otherwise one HTML file), and asks
+setup questions only once the person has something to try.
 
 **Other requests, and what App Cloning does with each:**
 
@@ -26,14 +32,14 @@ Its full instructions are read once the person picks.
 | A link to share their app | Its "Share it" steps: the checks first, then how, by what their AI app offers. |
 | A review of this repository | A review. App Cloning does not start. |
 
-**The instructions**, version 1.3.0, where every file they name is in the same release:
-https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/SKILL.md (in a checkout of this
+**The instructions**, version 1.4.0, where every file they name is in the same release:
+https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning/SKILL.md (in a checkout of this
 repository: `appcloning/SKILL.md`). They describe how App Cloning works with what the assistant can do (code on the
 person's computer, code on a cloud computer, a live preview, files, or text only) and where the person's files end
 up. When a file does not open, App Cloning names it, and does not use another release's files or guess what one says.
 Opening the link installs nothing.
 
-**Versions.** This is version 1.3.0. A copy installed or saved earlier may be older; `README.md`, under "Install,
+**Versions.** This is version 1.4.0. A copy installed or saved earlier may be older; `README.md`, under "Install,
 update and remove", says how to update it.
 
 Working inside a checkout of this repository (as a coding agent): the skill's files are `appcloning/SKILL.md` and

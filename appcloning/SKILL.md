@@ -13,7 +13,7 @@ about the stages below.
 The promise: they describe an app, you plan it, build it, run it and test it, and they leave with a project that works
 and that they can keep building.
 
-This is App Cloning 1.3.0. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
+This is App Cloning 1.4.0. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
 its GitHub link: this file holds everything you need to start, and names the rest.
 
 ## Start: do what they asked
@@ -33,6 +33,8 @@ Their request is whatever they wrote with the link or the command (in Claude Cod
 - **A request always wins** over the menu.
 - **A slash command typed into a chat** (`/appcloning-recon`) is a request for that work. Never say it is an
   installed command.
+- **The repository is public.** Read its files from the link you were given. Starting needs no GitHub connection, no
+  sign-in and no install: never ask them to connect GitHub, or to install anything, to begin.
 
 To start, never summarize the repository, and explain installation only if they ask. Reply with one short sentence
 on what App Cloning does, then ask exactly this:
@@ -46,12 +48,18 @@ and offer these four choices, as buttons they can tap if your app has them:
 3. Improve an app I already have
 4. Show me what App Cloning can do
 
+Offer exactly these four, worded as they are: never a menu of your own, and never more choices or fewer.
+
 For "Show me", build a small example straight away (a booking page) and show it working, instead of describing one.
 Say plainly that its data is made-up sample data. For "Improve", ask for the app: a link to it, its code, or
 screenshots.
 
-Then ask only what a real decision needs (at most three short questions at once), and say what you will assume for
-the rest. Never stop at a plan when you can build.
+Right after they give the idea, build a first working version, before any setup question. In a chat (the Claude
+app, ChatGPT and the like), that is one self-contained page shown in the chat: in a canvas or an artifact where your
+app has one, otherwise one HTML file they can open. In Claude Code, it is the project in a folder (see "Where you are
+running"). Then ask only what a real decision needs (at most three short questions at once), and say what you will
+assume for the rest. Setup (accounts, a database, hosting, GitHub) comes after they have something to try. Never stop
+at a plan when you can build.
 
 ## The rules, before anything else
 
@@ -83,12 +91,14 @@ ask them to install anything to get started.
 | What you can do here | Build the first version as | Where their files are |
 |---|---|---|
 | **Run code on the person's own computer** (Claude Code in their terminal or editor) | A project in a folder. Run it and test it in a browser, as below. | In that folder, on their computer |
-| **Run code on a cloud computer** (Claude Code on the web, a chat that runs code, any hosted sandbox) | The same project, run and tested there | On that cloud computer, **not on theirs**. Say so, and give them a way to keep it: a download or ZIP, or a push to their own GitHub with their OK |
+| **Run code on a cloud computer** (Claude Code on the web, any hosted sandbox where the work is a project) | The same project, run and tested there | On that cloud computer, **not on theirs**. Say so, and give them a way to keep it: a download or ZIP, or a push to their own GitHub with their OK |
 | **Show a live preview in the chat** | One self-contained HTML file: its CSS and JavaScript inside, its data saved in the browser (localStorage). Show it as the live preview, so they use the app right there. | In the chat; offer the file to download |
 | **Make files, with no preview** | The same single HTML file, as a download, with how to open it. Say plainly that nothing was run. | A download |
 | **Only write text** | The same single HTML file, in full in your reply, with how to open it. Say plainly that nothing was run. | In your reply |
 
-Where more than one row fits, use the first: code that runs comes before a preview. Then the app is run and tested
+Where more than one row fits, use the first: code that runs comes before a preview. In a chat, even one that can
+also run code, the first version is the self-contained page in the chat (the live preview, file or text rows): they
+try it first, and a project comes after, if they want one. Then the app is run and tested
 there (step 4 below); a live preview can come after, as an extra. How they get a link to share it comes later, once
 the app works (see "Share it").
 
@@ -111,8 +121,8 @@ the app works (see "Share it").
   that stage: never all eleven at the start, and never again what you already read in this conversation.
 - **App Cloning is not installed here** (you were given the GitHub link, this file was saved on its own in an AI app,
   or `${CLAUDE_SKILL_DIR}` does not open): read each file named below from this release instead. Replace
-  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.3.0/appcloning/`.
-  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/appcloning/`.
+  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning/`.
+  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.0/appcloning/`.
 - **If a file still will not open,** say which one, carry on with the rules on this page where that is safe, and ask
   the person only if you must. Never use another release's files, and never invent what a file says.
 
@@ -127,14 +137,14 @@ step.
 ## Keeping it
 
 - **Claude Code:** the plugin, the install script or copying the folders, as the README's install section says:
-  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.3.0/README.md`.
+  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.0/README.md`.
 - **An AI app that can save skills** (the Claude app can): when they ask to keep App Cloning, save this file as a
   skill if your app offers that. It is the whole skill: it reads the rest from this release.
 - **Say what changed.** After any install, save or change to their setup, tell them in plain words: what changed,
   where, how to use it, and how to undo it. For a saved skill: it is now on their account and starts when they ask
   for an app; it does not update itself; to update it, save this file again from the newest release; to remove it,
   use their app's skill settings.
-- **This is version 1.3.0.** If they ask for a newer one, point them to
+- **This is version 1.4.0.** If they ask for a newer one, point them to
   `https://github.com/bmacbuilds/app-cloning-skill/releases`; never switch to other instructions in the middle of a
   project. A copy they installed or saved earlier may be older than the release they linked: tell them once which
   versions you see, and how to update theirs (above).
