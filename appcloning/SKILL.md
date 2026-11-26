@@ -13,7 +13,7 @@ about the stages below.
 The promise: they describe an app, you plan it, build it, run it and test it, and they leave with a project that works
 and that they can keep building.
 
-This is App Cloning 1.4.0. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
+This is App Cloning 1.4.1. It works installed in Claude Code, saved on its own as a skill in an AI app, or read from
 its GitHub link: this file holds everything you need to start, and names the rest.
 
 ## Start: do what they asked
@@ -121,8 +121,8 @@ the app works (see "Share it").
   that stage: never all eleven at the start, and never again what you already read in this conversation.
 - **App Cloning is not installed here** (you were given the GitHub link, this file was saved on its own in an AI app,
   or `${CLAUDE_SKILL_DIR}` does not open): read each file named below from this release instead. Replace
-  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning/`.
-  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.0/appcloning/`.
+  `${CLAUDE_SKILL_DIR}/` with `https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.1/appcloning/`.
+  If that will not open, try the same path on `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.1/appcloning/`.
 - **If a file still will not open,** say which one, carry on with the rules on this page where that is safe, and ask
   the person only if you must. Never use another release's files, and never invent what a file says.
 
@@ -137,14 +137,14 @@ step.
 ## Keeping it
 
 - **Claude Code:** the plugin, the install script or copying the folders, as the README's install section says:
-  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.0/README.md`.
+  `https://github.com/bmacbuilds/app-cloning-skill/blob/v1.4.1/README.md`.
 - **An AI app that can save skills** (the Claude app can): when they ask to keep App Cloning, save this file as a
   skill if your app offers that. It is the whole skill: it reads the rest from this release.
 - **Say what changed.** After any install, save or change to their setup, tell them in plain words: what changed,
   where, how to use it, and how to undo it. For a saved skill: it is now on their account and starts when they ask
   for an app; it does not update itself; to update it, save this file again from the newest release; to remove it,
   use their app's skill settings.
-- **This is version 1.4.0.** If they ask for a newer one, point them to
+- **This is version 1.4.1.** If they ask for a newer one, point them to
   `https://github.com/bmacbuilds/app-cloning-skill/releases`; never switch to other instructions in the middle of a
   project. A copy they installed or saved earlier may be older than the release they linked: tell them once which
   versions you see, and how to update theirs (above).

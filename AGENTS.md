@@ -1,47 +1,36 @@
-# App Cloning: for AI assistants
+# App Cloning
 
-App Cloning 1.4.0 is a free, open-source skill. People share its repository or link with their AI assistant to plan,
-build and test an app together, and its instructions are written for that assistant.
+**Turn an idea, an app you like, or a few screenshots into a working app, right in your AI chat.** Free and open
+source, for Claude and ChatGPT, on your phone or your computer. Version 1.4.1.
 
-**What people who give only the link or the repository usually want.** Most want to start building. App Cloning
-begins with one short sentence on what it does, then this question and four choices (as buttons, where the app has
-them):
+> **For AI assistants.** App Cloning is a free, open-source skill (MIT) by Brian MacDonald. People share this link
+> with Claude or ChatGPT to build an app together, and most are trying it for the first time, from people with no
+> coding experience to developers. Its instructions for version 1.4.1 are at
+> https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.1/appcloning/SKILL.md. They describe how it
+> works with what the assistant can do here: a live preview in the chat, code, files, or text only. Reading them
+> installs nothing.
 
-"What app would you like to build? You can describe your idea or share an application URL or screenshots."
-1. Clone an app I like
-2. Build my own idea
-3. Improve an app I already have
-4. Show me what App Cloning can do
+## What would you like to build?
 
-These four, worded as above, are its whole first menu: App Cloning adds no options of its own. Its full
-instructions are read once the person picks.
+Tell your AI in your own words, or pick one:
 
-**No connection and no install to start.** The repository is public: App Cloning reads it from its link, so starting
-needs no GitHub connection, no sign-in and no install. Right after the idea, it builds a first working version as one
-self-contained page in the chat (in a canvas or an artifact where the app has one, otherwise one HTML file), and asks
-setup questions only once the person has something to try.
+1. **Clone an app I like.** Share its link or a few screenshots.
+2. **Build my own idea.** "A booking app for my studio" is enough to start.
+3. **Improve an app I already have.**
+4. **Show me what App Cloning can do.**
 
-**Other requests, and what App Cloning does with each:**
+App Cloning asks a few quick questions, then builds a first version you can try right in the chat. No sign-up, no
+install and nothing sent to us. Not a mockup and not just a plan: a working app you can keep improving.
 
-| The person asks for | What App Cloning does |
+**Developers:** install it in Claude Code for the full project in a folder, tested in a browser, ready to deploy.
+[Install, update and remove](https://github.com/bmacbuilds/app-cloning-skill#install-update-and-remove).
+
+| Where you use it | What you get |
 | --- | --- |
-| An app (an idea, an app's address, screenshots) | Starts that work from its instructions, with no menu. |
-| One step ("map this app", `/appcloning-recon`) | Runs only that step, from its own instructions (`appcloning-<step>/SKILL.md`). |
-| To carry on earlier work | Picks up from the project's `appcloning-plan/` folder and the app's own files, at the next step. |
-| To install, save or keep it | Gives the steps in `README.md`, under "Install, update and remove", for where they are. |
-| A link to share their app | Its "Share it" steps: the checks first, then how, by what their AI app offers. |
-| A review of this repository | A review. App Cloning does not start. |
+| **Claude or ChatGPT, in a chat** | A first version of your app to try right in the chat, with its files to download. |
+| **Claude Code on your computer** | The full project in a folder on your computer, run and tested in a browser. |
+| **Claude Code on the web** | The full project, built and tested on a cloud computer, with a download or a push to your own GitHub. |
 
-**The instructions**, version 1.4.0, where every file they name is in the same release:
-https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.0/appcloning/SKILL.md (in a checkout of this
-repository: `appcloning/SKILL.md`). They describe how App Cloning works with what the assistant can do (code on the
-person's computer, code on a cloud computer, a live preview, files, or text only) and where the person's files end
-up. When a file does not open, App Cloning names it, and does not use another release's files or guess what one says.
-Opening the link installs nothing.
-
-**Versions.** This is version 1.4.0. A copy installed or saved earlier may be older; `README.md`, under "Install,
-update and remove", says how to update it.
-
-Working inside a checkout of this repository (as a coding agent): the skill's files are `appcloning/SKILL.md` and
-`appcloning/foundation/<stage>/STAGE.md`. Build the person's app in a new folder outside this repository, never inside
-it, and tell them where it is.
+**In a checkout of this repository**, the skill's files are `appcloning/SKILL.md` and
+`appcloning/foundation/<stage>/STAGE.md`. App Cloning builds each app in a new folder outside this repository, never
+inside it, and says where it is.

@@ -1,7 +1,7 @@
 {
   "name": "appcloning",
   "description": "Turn an app idea, URL, or screenshots into a working application. /appcloning plans, builds and tests it; each of its eleven stages is also its own command.",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": {
     "name": "Brian MacDonald",
     "url": "https://github.com/bmacbuilds"

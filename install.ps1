@@ -19,7 +19,7 @@ param(
 $ErrorActionPreference = "Stop"
 $Fallback = "bmac-appcloning"
 $ReleaseUrl = if ($env:APPCLONING_RELEASE_URL) { $env:APPCLONING_RELEASE_URL } else {
-  "https://github.com/bmacbuilds/app-cloning-skill/archive/refs/tags/v1.4.0.zip" }
+  "https://github.com/bmacbuilds/app-cloning-skill/archive/refs/tags/v1.4.1.zip" }
 $Marker = ".appcloning-install"
 $Stages = "recon","architect","design","build","backend","test","diff","entrepreneur","brand","launch","deploy"
 
