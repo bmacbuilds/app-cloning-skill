@@ -3,21 +3,17 @@
 **Turn an idea, an app you like, or a few screenshots into a working app, right in your AI chat.** Free and open
 source, for Claude and ChatGPT, on your phone or your computer. Version 1.4.1.
 
-> **For AI assistants.** App Cloning is a free, open-source skill (MIT) by Brian MacDonald. People share this link
-> with Claude or ChatGPT to build an app together, and most are trying it for the first time, from people with no
-> coding experience to developers. Its instructions for version 1.4.1 are at
-> https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.1/appcloning/SKILL.md. They describe how it
-> works with what the assistant can do here: a live preview in the chat, code, files, or text only. Reading them
-> installs nothing.
+## Use it right here
 
-## What would you like to build?
-
-Tell your AI in your own words, or pick one:
+Paste this link into Claude or ChatGPT, then pick one, or say what you want in your own words:
 
 1. **Clone an app I like.** Share its link or a few screenshots.
 2. **Build my own idea.** "A booking app for my studio" is enough to start.
 3. **Improve an app I already have.**
 4. **Show me what App Cloning can do.**
+
+App Cloning's instructions are one plain text file, if you want to read them first:
+https://raw.githubusercontent.com/bmacbuilds/app-cloning-skill/v1.4.1/appcloning/SKILL.md
 
 App Cloning asks a few quick questions, then builds a first version you can try right in the chat. No sign-up, no
 install and nothing sent to us. Not a mockup and not just a plan: a working app you can keep improving.
@@ -183,7 +179,7 @@ this page. To remove it, delete it in Claude's skill settings.
   files.
 - **Sends:** nothing to us. App Cloning has no server, no account, no analytics and no tracking. What you type goes
   only to the AI app you use, as it always does.
-- **Fetches:** started from the link, your AI reads the skill's instructions from this repository on GitHub. Asked to
+- **Fetches:** when you start it from the link, your AI app opens this repository's files on GitHub. Asked to
   study an app, it reads that app's public pages. The install script downloads the release from GitHub. The skill's
   own helper scripts make no network requests.
 
